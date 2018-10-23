@@ -1,0 +1,159 @@
+@import 'node_modules/@angular/material/theming';
+@include mat-core();
+
+$primary-palette: mat-palette($mat-teal, 800, 300, 900);
+$secondary-palette: mat-palette($mat-teal, 50);
+$accent-palette: mat-palette($mat-pink, 800);
+$warn-palette: mat-palette($mat-red, A200);
+
+$theme: mat-light-theme($primary-palette, $accent-palette, $warn-palette);
+
+@include angular-material-theme($theme);
+
+$primary: mat-color($primary-palette);
+$secondary: mat-color($secondary-palette);
+$accent: mat-color($accent-palette);
+$warn: mat-color($warn-palette);
+
+/*
+ * Classes that allow us to theme things that aren't referenced here.
+ */
+
+.color-mat-primary {
+  color: $primary !important;
+}
+
+.background-color-mat-primary {
+  background-color: $primary !important;
+}
+
+.fill-mat-primary {
+  fill: $primary !important;
+}
+
+.color-mat-secondary {
+  color: $secondary !important;
+}
+
+.background-color-mat-secondary {
+  background-color: $secondary !important;
+}
+
+.fill-mat-secondary {
+  fill: $secondary !important;
+}
+
+.color-mat-accent {
+  color: $accent !important;
+}
+
+.background-color-mat-accent {
+  background-color: $accent !important;
+}
+
+.fill-mat-accent {
+  fill: $accent !important;
+}
+
+.color-mat-warn {
+  color: $warn !important;
+}
+
+.background-color-mat-warn {
+  background-color: $warn !important;
+}
+
+.fill-mat-warn {
+  fill: $warn !important;
+}
+
+/*
+ * Other useful colors.
+ */
+
+ .color-whitesmoke {
+  color: whitesmoke !important;
+}
+
+.background-color-whitesmoke {
+  background-color: whitesmoke !important;
+}
+
+.fill-whitesmoke {
+  fill: whitesmoke !important;
+}
+
+/*
+ * Styles for @angular/material.
+ */
+
+@media only screen and (min-width: 320px) {
+  mat-form-field {
+      max-width: 320px;
+  }    
+}
+
+/*
+ * Reserved for when a mat-list-item is selected...
+ */
+
+mat-list-item.mat-accent {
+  color: $accent !important;
+}
+
+// mat-toolbar .mat-paginator {
+//   background: whitesmoke;
+//   color: rgba(0, 0, 0, 0.87);
+// }
+
+.mat-row:nth-child(even) {
+  background: whitesmoke;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-row:hover {
+  background: $secondary;
+}
+
+
+
+
+mat-toolbar.mat-primary {
+  color: $secondary !important;
+}
+
+/*
+ * Styles for @my-company/common.
+ */
+
+/*
+ * LoadingModule
+ */
+
+loading {
+  width: 128px;
+  height: 128px;
+  fill: $accent;
+}
+
+.loading-overlay-backdrop {
+  background-color: $primary !important;
+  opacity: 0.1 !important;
+}
+
+/*
+ * LogoModule
+ */
+
+logo {
+  width: 64px;
+  height: 64px;
+  fill: $secondary;
+}
+
+@media (max-width: 599px) {
+  logo {
+      width: 56px !important;
+      height: 56px !important;
+  }
+}

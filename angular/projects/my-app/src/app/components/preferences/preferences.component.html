@@ -1,0 +1,11 @@
+<div class="flex-grow-1 display-flex flex-direction-column overflow-auto" scrollAudio="scrollAudio">
+    <div class="flex-grow-1 margin-24px display-flex flex-direction-column">
+
+        <mat-slide-toggle [(ngModel)]="audioService.enabled" color="primary" labelPosition="before"
+            mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Audio</mat-slide-toggle>
+
+        <mat-slide-toggle [(ngModel)]="layoutService.buttonsRight" color="primary" labelPosition="before"
+            mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Buttons Right</mat-slide-toggle>
+
+    </div>
+</div>

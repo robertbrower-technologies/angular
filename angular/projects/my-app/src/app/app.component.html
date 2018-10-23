@@ -1,0 +1,26 @@
+<mat-toolbar class="flex-grow-0 flex-shrink-0" color="primary">
+    <logo></logo><h3>App</h3>
+    <div class="flex-grow-1"></div>
+    <mat-icon class="cursor-pointer" [matMenuTriggerFor]="menu"
+        mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">menu</mat-icon>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item routerLink="preferences" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+            <span>Preferences</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
+<div class="flex-grow-1 display-flex flex-direction-column">
+    <div class="flex-shrink-0 background-color-mat-secondary mat-elevation-z8">
+        <mat-nav-list class="display-flex">
+            <mat-list-item routerLink="home" class="color-mat-primary" routerLinkActive="mat-accent font-weight-bold"
+                mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Home</mat-list-item>
+            <mat-list-item routerLink="lazy-a" class="color-mat-primary" routerLinkActive="mat-accent font-weight-bold"
+                mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Table</mat-list-item>
+            <mat-list-item routerLink="lazy-b" class="color-mat-primary" routerLinkActive="mat-accent font-weight-bold"
+                mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Form</mat-list-item>
+            <!-- <mat-list-item routerLink="lazy-c" class="color-mat-primary" routerLinkActive="mat-accent font-weight-bold"
+                mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Playground</mat-list-item> -->
+        </mat-nav-list>
+    </div>
+    <router-outlet></router-outlet>
+</div>

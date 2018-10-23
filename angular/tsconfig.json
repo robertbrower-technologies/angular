@@ -1,0 +1,61 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "@my-company/my-lib": [
+        "dist/my-company/my-lib"
+      ],
+      "@my-company/my-lib/*": [
+        "dist/my-company/my-lib/*"
+      ],
+      "@my-company/lazy-a-library": [
+        "dist/my-company/lazy-a-library"
+      ],
+      "@my-company/lazy-a-library/*": [
+        "dist/my-company/lazy-a-library/*"
+      ],
+      "@my-company/lazy-b-library": [
+        "dist/my-company/lazy-b-library"
+      ],
+      "@my-company/lazy-b-library/*": [
+        "dist/my-company/lazy-b-library/*"
+      ],
+      "lazy-c-library": [
+        "dist/lazy-c-library"
+      ],
+      "lazy-c-library/*": [
+        "dist/lazy-c-library/*"
+      ],
+      "@my-company/lazy-c-library": [
+        "dist/my-company/lazy-c-library"
+      ],
+      "@my-company/lazy-c-library/*": [
+        "dist/my-company/lazy-c-library/*"
+      ],
+      "@my-company/common": [
+        "dist/my-company/common",
+        "dist/my-company/common"
+      ],
+      "@my-company/common/*": [
+        "dist/my-company/common/*",
+        "dist/my-company/common/*"
+      ]
+    }
+  }
+}

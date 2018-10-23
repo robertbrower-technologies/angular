@@ -1,0 +1,83 @@
+<div class="display-flex flex-direction-column overflow-auto" scrollAudio="scrollAudio">
+
+    <h2 class="margin-24px color-mat-accent">New Member</h2>
+
+    <form class="flex-grow-1 margin-left-24px margin-right-24px display-flex flex-direction-column"
+        [formGroup]="formGroup">
+
+        <fieldset class="margin-bottom-24px border-0 mat-elevation-z8">
+
+            <legend>
+                <h3 class="color-mat-accent">Personal Information</h3>
+            </legend>
+
+            <!--  -->
+            <mat-form-field *ngIf="formGroup.controls['id'].value"
+                class="margin-left-24px" appearance="standard" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+                <mat-label> Id</mat-label>
+                <input matInput formControlName="id" [readonly]="true">
+            </mat-form-field>
+
+            <!--  -->
+            <mat-form-field class="margin-left-24px" appearance="standard" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+                <mat-label> First Name</mat-label>
+                <input required autofocus matInput formControlName="first_name">
+                <error-icon for="first_name" matSuffix color="warn">error</error-icon>
+                <!-- <mat-hint align="end">{{formGroup.controls['first_name'].errors | json}}</mat-hint> -->
+            </mat-form-field>
+
+            <!--  -->
+            <mat-form-field class="margin-left-24px" appearance="standard" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+                <mat-label> Last Name</mat-label>
+                <input required autofocus matInput formControlName="last_name">
+                <error-icon for="last_name" matSuffix color="warn">error</error-icon>
+                <!-- <mat-hint align="end">{{formGroup.controls['last_name'].errors | json}}</mat-hint> -->
+            </mat-form-field>
+
+            <!--  -->
+            <mat-form-field class="margin-left-24px" appearance="standard" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+                <mat-label> Email</mat-label>
+                <input required autofocus matInput formControlName="email">
+                <error-icon for="email" matSuffix color="warn">error</error-icon>
+                <!-- <mat-hint align="end">{{formGroup.controls['email'].errors | json}}</mat-hint> -->
+            </mat-form-field>
+            
+            <!--  -->
+            <mat-form-field class="margin-left-24px" appearance="standard" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+                <mat-label> Gender</mat-label>
+                <mat-select required formControlName="gender" [disableOptionCentering]="true">
+                    <mat-option value="Female" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Female</mat-option>
+                    <mat-option value="Male" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">Male</mat-option>
+                </mat-select>
+                <error-icon for="gender" matSuffix color="warn">error</error-icon>
+                <!-- <mat-hint align="end">{{formGroup.controls['gender'].errors | json}}</mat-hint> -->
+            </mat-form-field>
+
+        </fieldset>
+
+        <fieldset class="margin-bottom-24px border-0 mat-elevation-z8">
+
+                <legend>
+                    <h3 class="color-mat-accent">Connection Information</h3>
+                </legend>
+    
+                <!--  -->
+                <mat-form-field class="margin-left-24px" appearance="standard" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio">
+                    <mat-label> IP Address</mat-label>
+                    <input required autofocus matInput formControlName="ip_address">
+                    <error-icon for="ip_address" matSuffix color="warn">error</error-icon>
+                    <!-- <mat-hint align="end">{{formGroup.controls['ip_address'].errors | json}}</mat-hint> -->
+                </mat-form-field>
+    
+            </fieldset> 
+    
+    </form>
+
+</div>
+<!-- <pre>{{formGroup.value | json}}</pre> -->
+<div class="margin-24px flex-shrink-0 display-flex">
+    <div *ngIf="layoutService.buttonsRight" class="flex-grow-1"></div>
+    <button mat-raised-button color="primary" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio" [disabled]="formGroup.invalid"><mat-icon>check_circle</mat-icon>OK</button>
+    <button mat-raised-button class="margin-left-8px" mouseOverAudio="mouseOverAudio" clickAudio="clickAudio"><mat-icon>cancel</mat-icon>Cancel</button>
+    <div *ngIf="!layoutService.buttonsRight" class="flex-grow-1"></div>
+</div>

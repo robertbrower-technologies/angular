@@ -1,0 +1,11 @@
+<h3 class="color-mat-accent" mat-dialog-title>{{data.title}}</h3>
+<mat-dialog-content>{{data.message}}</mat-dialog-content>
+<mat-dialog-actions class="display-flex">
+    <span class="flex-grow-1"></span>
+    <button mat-raised-button color="primary"
+        [mat-dialog-close]="true"
+        mouseOverAudio="mouseOverAudio" clickAudio="clickAudio"><mat-icon>check_circle</mat-icon>OK</button>
+    <button mat-raised-button class="margin-left-8px"
+        mat-dialog-close
+        mouseOverAudio="mouseOverAudio" clickAudio="clickAudio"><mat-icon>cancel</mat-icon>Cancel</button>
+</mat-dialog-actions>
